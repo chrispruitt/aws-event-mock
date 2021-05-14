@@ -6,6 +6,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"strings"
 
 	"github.com/aws/aws-lambda-go/events"
 )
@@ -21,6 +22,9 @@ import (
 // }
 
 func (event *Event) GetCloudwatchLogEvent() (resp string, err error) {
+
+	// Remove whitespaces
+	event.Message = strings.Join(strings.Fields(event.Message), "")
 
 	logData := events.CloudwatchLogsData{
 		Owner:               "123456789123",
