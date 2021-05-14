@@ -1,27 +1,6 @@
 # github.com/aws/aws-lambda-go v1.23.0
 ## explicit
 github.com/aws/aws-lambda-go/events
-# github.com/aws/aws-sdk-go v1.38.39
-## explicit
-github.com/aws/aws-sdk-go/aws
-github.com/aws/aws-sdk-go/aws/awserr
-github.com/aws/aws-sdk-go/aws/credentials
-github.com/aws/aws-sdk-go/aws/endpoints
-github.com/aws/aws-sdk-go/internal/context
-github.com/aws/aws-sdk-go/internal/ini
-github.com/aws/aws-sdk-go/internal/sdkio
-github.com/aws/aws-sdk-go/internal/shareddefaults
-github.com/aws/aws-sdk-go/internal/sync/singleflight
-# github.com/aws/aws-sdk-go-v2 v1.4.0
-## explicit
-github.com/aws/aws-sdk-go-v2/aws
-github.com/aws/aws-sdk-go-v2/internal/rand
-github.com/aws/aws-sdk-go-v2/internal/sdk
-github.com/aws/aws-sdk-go-v2/internal/sync/singleflight
-# github.com/aws/smithy-go v1.4.0
-github.com/aws/smithy-go/logging
-github.com/aws/smithy-go/middleware
-github.com/aws/smithy-go/ptr
 # github.com/inconshreveable/mousetrap v1.0.0
 github.com/inconshreveable/mousetrap
 # github.com/spf13/cobra v0.0.5

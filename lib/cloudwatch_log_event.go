@@ -6,7 +6,9 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"strings"
+	"unicode/utf8"
 
 	"github.com/aws/aws-lambda-go/events"
 )
@@ -22,6 +24,18 @@ import (
 // }
 
 func (event *Event) GetCloudwatchLogEvent() (resp string, err error) {
+
+	// read from file if first char is @
+	if string(event.Message[0]) == "@" {
+		_, i := utf8.DecodeRuneInString(event.Message)
+		var b []byte
+		b, err = ioutil.ReadFile(event.Message[i:])
+		if err != nil {
+			err = fmt.Errorf("Error: unable to parse file: %s", err)
+			return
+		}
+		event.Message = string(b)
+	}
 
 	// Remove whitespaces
 	event.Message = strings.Join(strings.Fields(event.Message), "")
