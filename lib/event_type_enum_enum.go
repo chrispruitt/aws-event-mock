@@ -11,12 +11,15 @@ import (
 const (
 	// EventTypeEnumCloudwatchLog is a EventTypeEnum of type Cloudwatch-Log.
 	EventTypeEnumCloudwatchLog EventTypeEnum = iota
+	// EventTypeEnumSns is a EventTypeEnum of type Sns.
+	EventTypeEnumSns
 )
 
-const _EventTypeEnumName = "cloudwatch-log"
+const _EventTypeEnumName = "cloudwatch-logsns"
 
 var _EventTypeEnumNames = []string{
 	_EventTypeEnumName[0:14],
+	_EventTypeEnumName[14:17],
 }
 
 // EventTypeEnumNames returns a list of possible string values of EventTypeEnum.
@@ -28,6 +31,7 @@ func EventTypeEnumNames() []string {
 
 var _EventTypeEnumMap = map[EventTypeEnum]string{
 	0: _EventTypeEnumName[0:14],
+	1: _EventTypeEnumName[14:17],
 }
 
 // String implements the Stringer interface.
@@ -39,7 +43,8 @@ func (x EventTypeEnum) String() string {
 }
 
 var _EventTypeEnumValue = map[string]EventTypeEnum{
-	_EventTypeEnumName[0:14]: 0,
+	_EventTypeEnumName[0:14]:  0,
+	_EventTypeEnumName[14:17]: 1,
 }
 
 // ParseEventTypeEnum attempts to convert a string to a EventTypeEnum

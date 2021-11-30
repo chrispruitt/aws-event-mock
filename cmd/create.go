@@ -39,7 +39,7 @@ var (
 
 func init() {
 	createCmd.PersistentFlags().StringVarP(&event.Message, "message", "m", "", "Message of the event. (Required)")
-	createCmd.PersistentFlags().StringVarP(&eventType, "type", "t", lib.EventTypeEnumCloudwatchLog.String(), "Event Type. (default: cloudwatch-log)")
+	createCmd.PersistentFlags().StringVarP(&eventType, "type", "t", lib.EventTypeEnumCloudwatchLog.String(), "Event Type. (default: sns)")
 
 	// runCmd.PersistentFlags().StringVarP(&task.Cluster, "cluster", "", "", "ECS cluster")
 	// runCmd.PersistentFlags().StringVarP(&task.Name, "name", "n", "ephemeral-task-from-ecs-cli", "Assign a name to the task")

@@ -15,7 +15,7 @@ var version = "development"
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "aws-event-mock",
-	Short: "aws-event-mock is used as a starter cli project",
+	Short: "aws-event-mock is to generate mock up aws notifications in json format",
 }
 
 func main() {
